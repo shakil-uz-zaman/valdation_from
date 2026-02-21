@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shakil Biodata</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+  <div class="inner-border">
+
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
+
+    <h1>BIODATA</h1>
+    
+    
+    <h2>PERSONAL INFORMATION</h2>
+    <div class="content">
+      <div class="details">
+
+        <div class="row"><span>Name</span><span>:</span><span><input type="text" placeholder="Enter name" class="input-field"></span></div>
+
+        <div class="row">
+          <span>Birthdate</span><span>:</span>
+          <span><input type="text" placeholder="Enter birthdate (YYYY-MM-DD)" class="input-field birthdate-input"></span>
+        </div>
+
+        <div class="row">
+          <span>Gender</span><span>:</span>
+          <span class="form-options">
+            <label><input type="radio" name="gender" checked> Male</label>
+            <label><input type="radio" name="gender"> Female</label>
+          </span>
+        </div>
+
+        <div class="row">
+          <span>Blood Group</span><span>:</span>
+          <span>
+            <select class="input-field">
+              <option value="">Select</option>
+              <option>A+</option><option>A-</option>
+              <option>B+</option><option>B-</option>
+              <option>AB+</option><option>AB-</option>
+              <option>O+</option><option>O-</option>
+            </select>
+          </span>
+        </div>
+
+        <div class="row"><span>Nationality</span><span>:</span><span><input type="text" placeholder="Enter nationality" class="input-field"></span></div>
+        <div class="row"><span>Religion</span><span>:</span><span><input type="text" placeholder="Enter religion" class="input-field"></span></div>
+
+        <div class="row">
+          <span>Hobbies</span><span>:</span>
+          <span class="form-options">
+            <label><input type="checkbox"> Reading</label>
+            <label><input type="checkbox"> Traveling</label>
+            <label><input type="checkbox"> Sports</label>
+            <label><input type="checkbox"> Music</label>
+          </span>
+        </div>
+
+         
+
+      </div>
+
+      <!-- Photo  -->
+      <div class="photo">
+        <img id="preview" src="default.png" alt="Profile Photo">
+        <label class="upload-btn">
+          Upload Photo
+          <input type="file" accept="image/*" onchange="loadPhoto(event)">
+        </label>
+      </div>
+    </div>
+
+    
+    <div class="divider"></div>
+    <h2>EDUCATION & PROFESSION</h2>
+    <div class="details">
+      <div class="row"><span>Education</span><span>:</span><span><input type="text" placeholder="Enter education" class="input-field"></span></div>
+      <div class="row"><span>Profession</span><span>:</span><span><input type="text" placeholder="Enter profession" class="input-field"></span></div>
+      <div class="row"><span>Organization</span><span>:</span><span><input type="text" placeholder="Enter organization" class="input-field"></span></div>
+    </div>
+
+   
+    <div class="divider"></div>
+    <h2>FAMILY INFORMATION</h2>
+    <div class="details">
+      <div class="row"><span>Father Name</span><span>:</span><span><input type="text" placeholder="Enter father name" class="input-field"></span></div>
+      <div class="row"><span>Father Occupation</span><span>:</span><span><input type="text" placeholder="Enter father occupation" class="input-field"></span></div>
+      <div class="row"><span>Mother Name</span><span>:</span><span><input type="text" placeholder="Enter mother name" class="input-field"></span></div>
+      <div class="row"><span>Mother Occupation</span><span>:</span><span><input type="text" placeholder="Enter mother occupation" class="input-field"></span></div>
+      <div class="row"><span>Contact No.</span><span>:</span><span><input type="text" placeholder="Enter contact number" class="input-field"></span></div>
+      <div class="row"><span>Address</span><span>:</span><span><input type="text" placeholder="Enter address" class="input-field"></span></div>
+    </div>
+
+    <div id="form-errors" style="color:red; text-align:center; margin:20px 0 0 0; font-size:15px;"></div>
+    <div style="text-align:center; margin-top:30px;">
+      <button class="submit-btn" style="padding:10px 30px; font-size:18px;">Submit Biodata</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function loadPhoto(event) {
+    document.getElementById('preview').src =
+      URL.createObjectURL(event.target.files[0]);
+  }
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
